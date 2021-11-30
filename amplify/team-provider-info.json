@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tempest-dev-224258-authRole",
+      "UnauthRoleArn": "arn:aws:iam::943650273662:role/amplify-tempest-dev-224258-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::943650273662:role/amplify-tempest-dev-224258-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tempest-dev-224258-deployment",
+      "UnauthRoleName": "amplify-tempest-dev-224258-unauthRole",
+      "StackName": "amplify-tempest-dev-224258",
+      "StackId": "arn:aws:cloudformation:us-east-1:943650273662:stack/amplify-tempest-dev-224258/f21873a0-aa26-11eb-9f2d-0a5cf73de175",
+      "AmplifyAppId": "d1rdnq35055h74"
+    },
+    "categories": {
+      "auth": {
+        "tempest7ca71351": {}
+      }
+    }
+  }
+}

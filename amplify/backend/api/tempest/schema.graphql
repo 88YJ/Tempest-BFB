@@ -1,0 +1,36 @@
+type User @model {
+  id: ID!
+  username: String!
+  email: String!
+  investing: [Card] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Card @model @key(name: "byUser", fields: ["ownerID"]) {
+  id: ID!
+  name: String!
+  slogan: String!
+  likes: Int!
+  nopes: Int!
+  deck: [Slide!]! @connection(keyName: "byCard", fields: ["id"])
+  team: [Member] @connection(keyName: "byCard", fields: ["id"])
+  ownerID: ID!
+  owner: User @connection(fields: ["ownerID"])
+}
+
+type Slide @model @key(name: "byCard", fields: ["cardID"]) {
+  id: ID!
+  cardID: ID!
+  title: String!
+  imageUri: String!
+  description: String!
+  locationInDeck: Int!
+}
+
+type Member @model @key(name: "byCard", fields: ["cardID"]) {
+  id: ID!
+  cardID: ID!
+  name: String!
+  imageUri: String!
+  position: String!
+  linkedIn: String
+}
